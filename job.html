@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบสมัครงาน</title>
+</head>
+<body>
+    <h1>ใบสมัครงาน</h1>
+
+    <form action="/submit-application" method="post" enctype="multipart/form-data">
+        <div class="section">
+            <h2>ข้อมูลส่วนตัว</h2>
+            <label for="firstName">ชื่อ:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">นามสกุล:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">เบอร์โทรศัพท์:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="birthDate">วันเกิด:</label>
+            <input type="date" id="birthDate" name="birthDate">
+        </div>
+
+        <div class="section">
+            <h2>ตำแหน่งที่ต้องการ</h2>
+            <label for="position">ตำแหน่งที่ต้องการสมัคร:</label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="expectedSalary">เงินเดือนที่คาดหวัง (บาท):</label>
+            <input type="number" id="expectedSalary" name="expectedSalary" min="0">
+        </div>
+
+        <div class="section">
+            <h2>ประวัติการศึกษา</h2>
+            <label for="educationLevel">ระดับการศึกษาสูงสุด:</label>
+            <select id="educationLevel" name="educationLevel">
+                <option value="">-- เลือก --</option>
+                <option value="ต่ำกว่ามัธยมศึกษา">ต่ำกว่ามัธยมศึกษา</option>
+                <option value="มัธยมศึกษาตอนต้น">มัธยมศึกษาตอนต้น</option>
+                <option value="มัธยมศึกษาตอนปลาย">มัธยมศึกษาตอนปลาย</option>
+                <option value="ปวช.">ปวช.</option>
+                <option value="ปวส.">ปวส.</option>
+                <option value="ปริญญาตรี">ปริญญาตรี</option>
+                <option value="ปริญญาโท">ปริญญาโท</option>
+                <option value="ปริญญาเอก">ปริญญาเอก</option>
+            </select>
+
+            <label for="major">สาขา:</label>
+            <input type="text" id="major" name="major">
+
+            <label for="graduationYear">ปีที่สำเร็จการศึกษา:</label>
+            <input type="number" id="graduationYear" name="graduationYear" min="1900" max="2099">
+        </div>
+
+        <div class="section">
+            <h2>ประสบการณ์ทำงาน</h2>
+            <label for="experience">ประสบการณ์ทำงาน (ปี):</label>
+            <input type="number" id="experience" name="experience" min="0">
+
+            <label for="relevantSkills">ทักษะที่เกี่ยวข้อง:</label>
+            <textarea id="relevantSkills" name="relevantSkills" rows="4"></textarea>
+        </div>
+
+        <div class="section">
+            <h2>เอกสารแนบ</h2>
+            <label for="resume">อัปโหลดเรซูเม่/CV (PDF):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf">
+
+            <label for="transcript">อัปโหลดสำเนาทรานสคริปต์ (ถ้ามี):</label>
+            <input type="file" id="transcript" name="transcript" accept=".pdf">
+        </div>
+
+        <div class="section">
+            <h2>เงื่อนไขและข้อตกลง</h2>
+            <label>
+                <input type="checkbox" name="agreement" required> ข้าพเจ้ารับรองว่าข้อมูลที่ให้มาทั้งหมดเป็นความจริง
+            </label>
+        </div>
+
+        <button type="submit">ส่งใบสมัคร</button>
+    </form>
+</body>
+</html>
